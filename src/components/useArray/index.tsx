@@ -4,7 +4,7 @@ import { useState } from "react"
 interface IUseArray{
     defaultValue: Array<any>
 }
-export default function useArray(options : IUseArray) {
+export const useArray = (options : IUseArray)  => {
   const {defaultValue} = options
   const [array, setArray] = useState(defaultValue)
 
