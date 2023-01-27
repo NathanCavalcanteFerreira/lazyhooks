@@ -1,29 +1,24 @@
 interface IUseOrderArrayOfObjectsByKey {
     arr: Array<Object>; 
     key: string;
-    deacresing?: boolean
+    order: 'asc' | 'desc'
 }
 
 export const useOrderArrayOfObjectsByKey = (options: IUseOrderArrayOfObjectsByKey) => {
-    const { arr, key, deacresing } = options
+    const { arr, key, order = 'asc' } = options
 
-    const compare = (options : any) => {
-        const {a, b} = options
-        const param = key
-        return a[param] > b[param] ? 1 : -1 || a[param] < b[param] ? -1 : 1
+    if(arr.length > 1){
+        const compare = (options : any) => {
+            const {a, b} = options
+            const param = key
+            return(
+                order != 'asc' ?  a[param] > b[param] ? -1 : 1 || a[param] < b[param] ? 1 : -1 : 
+                a[param] > b[param] ? 1 : -1 || a[param] < b[param] ? -1 : 1
+            )
+        }    
+        const sortedByKey = arr.sort(compare)       
+        return sortedByKey
     }
-
-    const reverseCompare = (options: any) =>{
-        const {a, b} = options
-        const param = key
-        return a[param] > b[param] ? -1 : 1 || a[param] < b[param] ? 1 : -1
-    }
-
-    const sortedByKeyMinor = arr.sort(reverseCompare) 
-    const sortedByKey = arr.sort(compare)
-     
-   
-    return(
-        deacresing ? sortedByKeyMinor : sortedByKey
-    )
+    return
+    
 }
