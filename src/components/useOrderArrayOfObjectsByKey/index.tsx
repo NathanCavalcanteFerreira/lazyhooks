@@ -1,4 +1,4 @@
-interface IUseOrderArrayOfObjectsByKey {
+export interface IUseOrderArrayOfObjectsByKey {
     arr: Array<Object>; 
     key: string;
     order: 'asc' | 'desc'

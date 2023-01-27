@@ -1,4 +1,4 @@
-interface IUseOrderObjectCollectionByKey {
+export interface IUseOrderObjectCollectionByKey {
     objectCollection: Object;
     key: string;
     order: 'asc' | 'desc'

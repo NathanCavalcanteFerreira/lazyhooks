@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-interface IUseArray{
+export interface IUseArray{
     defaultValue: Array<any>
 }
 export const useArray = (options : IUseArray)  => {

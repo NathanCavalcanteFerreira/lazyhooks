@@ -1,4 +1,4 @@
-interface IUseOrderAlphabetical{
+export interface IUseOrderAlphabetical{
     arr: Array<string>;
     language?: string 
 }

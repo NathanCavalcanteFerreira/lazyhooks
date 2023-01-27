@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-interface IUseToggle {
+export interface IUseToggle {
   (arg: boolean) : [boolean, () => void];
 } 
 

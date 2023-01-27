@@ -1,4 +1,4 @@
-interface IUseRemoveDuplicate {
+export interface IUseRemoveDuplicate {
     arr: Array<string | number>
 }
 

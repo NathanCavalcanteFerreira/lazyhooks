@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react"
 
-interface IUseAsync{
+export interface IUseAsync{
     callback: () => Promise<any>;
     dependencies: Array<any>
 }

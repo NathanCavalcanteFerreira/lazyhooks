@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-interface IUseSize {
+export interface IUseSize {
     ref: React.RefObject<HTMLElement>
 }
 

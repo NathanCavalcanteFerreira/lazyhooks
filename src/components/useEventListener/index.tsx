@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 
-interface IUseEventListener {
+export interface IUseEventListener {
     eventType: string;
     callback: (event: Event) => void;
     element?: HTMLElement | Window
